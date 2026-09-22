@@ -1,4 +1,6 @@
-/* EDITA SOLO ESTE BLOQUE PARA RENOVAR LOS ENLACES Y EPISODIOS */
+/* ============================================================
+   EDITA SOLO ESTE BLOQUE PARA RENOVAR LOS ENLACES Y EPISODIOS
+   ============================================================ */
 const content = {
   brand: "Palma Al Día",
   intro: "Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.",
@@ -26,39 +28,94 @@ const content = {
   ]
 };
 
-const toast = document.querySelector("#toast");
-let toastTimer;
-function placeholderNotice(event) {
-  if (event.currentTarget.dataset.ready === "false") {
-    event.preventDefault();
-    toast.textContent = "Este enlace está listo para conectar con tu URL definitiva.";
-    toast.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
-  }
+/* ============================================================
+   Utilidades
+   ============================================================ */
+const SAFE_PROTOCOL = /^(https?:\/\/|mailto:|tel:)/i;
+
+const $ = (selector) => document.querySelector(selector);
+
+/** Escapa el texto que se inserta como HTML, para que una comilla no rompa el marcado. */
+const esc = (text) => String(text ?? "").replace(/[&<>"']/g, (char) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+}[char]));
+
+/** Atributos de un enlace: si la URL no es válida queda inerte y muestra el aviso. */
+function linkAttrs(url) {
+  const ready = SAFE_PROTOCOL.test(url ?? "");
+  return ready
+    ? `href="${esc(url)}" data-ready="true" target="_blank" rel="noopener noreferrer"`
+    : 'href="#" data-ready="false"';
 }
-function safeLink(url) { return url && /^(https?:\/\/|mailto:|tel:)/i.test(url) ? url : "#"; }
-function linkState(url) { return url && /^(https?:\/\/|mailto:|tel:)/i.test(url) ? "true" : "false"; }
 
-document.querySelector("#brand-footer").textContent = `© ${new Date().getFullYear()} ${content.brand}`;
-document.querySelector("#intro-copy").textContent = content.intro;
-document.title = `${content.brand} — Enlaces y podcast`;
+/* ============================================================
+   Aviso flotante para enlaces aún sin configurar
+   ============================================================ */
+let toastTimer;
 
-document.querySelector("#main-links").innerHTML = content.links.map(item => `
-  <a class="link-card" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-    <span class="link-label"><span class="icon" aria-hidden="true">${item.short}</span>${item.label}</span><span class="arrow" aria-hidden="true">↗</span>
-  </a>`).join("");
+function placeholderNotice(event) {
+  if (event.currentTarget.dataset.ready !== "false") return;
 
-document.querySelector("#latest-number").textContent = content.latest.number;
-document.querySelector("#latest-image").src = content.latest.image;
-document.querySelector("#latest-meta").textContent = content.latest.meta;
-document.querySelector("#latest-title").textContent = content.latest.title;
-document.querySelector("#latest-summary").textContent = content.latest.summary;
-document.querySelector("#listen-links").innerHTML = content.latest.platforms.map(item => `
-  <a class="btn ${item.primary ? "primary" : ""}" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.label}</a>`).join("");
+  event.preventDefault();
+  const toast = $("#toast");
+  toast.textContent = "Este enlace está listo para conectar con tu URL definitiva.";
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+}
 
-document.querySelector("#episode-grid").innerHTML = content.promoted.map(item => `
-  <a class="mini" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-    <span class="mini-num">${item.number}</span><h4>${item.title}</h4><span class="mini-footer"><span>${item.duration}</span><span aria-hidden="true">Escuchar ↗</span></span>
-  </a>`).join("");
-document.querySelectorAll("[data-ready]").forEach(el => el.addEventListener("click", placeholderNotice));
+/* ============================================================
+   Render
+   ============================================================ */
+function renderHeader() {
+  document.title = `${content.brand} — Enlaces y podcast`;
+  $("#intro-copy").textContent = content.intro;
+  $("#brand-footer").textContent = `© ${new Date().getFullYear()} ${content.brand}`;
+}
+
+function renderLinks() {
+  $("#main-links").innerHTML = content.links.map((item) => `
+    <a class="link-card" ${linkAttrs(item.url)}>
+      <span class="link-label">
+        <span class="icon" aria-hidden="true">${esc(item.short)}</span>${esc(item.label)}
+      </span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>`).join("");
+}
+
+function renderLatest() {
+  const { number, image, meta, title, summary, platforms } = content.latest;
+
+  $("#latest-image").src = image;
+  $("#latest-number").textContent = number;
+  $("#latest-meta").textContent = meta;
+  $("#latest-title").textContent = title;
+  $("#latest-summary").textContent = summary;
+
+  $("#listen-links").innerHTML = platforms.map((item) => `
+    <a class="btn ${item.primary ? "primary" : ""}" ${linkAttrs(item.url)}>${esc(item.label)}</a>`).join("");
+}
+
+function renderPromoted() {
+  $("#episode-grid").innerHTML = content.promoted.map((item) => `
+    <a class="mini" ${linkAttrs(item.url)}>
+      <span class="mini-num">${esc(item.number)}</span>
+      <h4>${esc(item.title)}</h4>
+      <span class="mini-footer">
+        <span>${esc(item.duration)}</span>
+        <span aria-hidden="true">Escuchar ↗</span>
+      </span>
+    </a>`).join("");
+}
+
+/* ============================================================
+   Arranque
+   ============================================================ */
+renderHeader();
+renderLinks();
+renderLatest();
+renderPromoted();
+
+document.querySelectorAll("[data-ready]").forEach((el) => {
+  el.addEventListener("click", placeholderNotice);
+});

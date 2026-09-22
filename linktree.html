@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5B8726">
+  <title>Tu Proyecto — Enlaces y podcast</title>
+  <meta name="description" content="Todos nuestros enlaces y episodios destacados en un solo lugar.">
+  <link rel="icon" type="image/png" href="assets/palma-al-dia-icon.png">
+  <style>
+    @font-face { font-family: "Ubuntu"; src: url("assets/ubuntu-400.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Ubuntu"; src: url("assets/ubuntu-500.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Ubuntu"; src: url("assets/ubuntu-700.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+    :root {
+      --ink: #24311b;
+      --paper: #ffffff;
+      --green: #5b8726;
+      --orange: #fa9507;
+      --platinum: #e8e8e8;
+      --acid: #5b8726;
+      --muted: #64705d;
+      --line: rgba(91, 135, 38, .25);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 92% 7%, rgba(250,149,7,.13), transparent 25rem),
+        radial-gradient(circle at 3% 55%, rgba(91,135,38,.10), transparent 22rem),
+        var(--platinum);
+      color: var(--ink);
+      font-family: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 92px; border-bottom: 1px solid var(--line);
+    }
+    .brand-logo { display: block; width: 174px; height: 74px; object-fit: contain; object-position: left center; border-radius: 0 24px 24px 0; }
+    .eyebrow { margin: 0; font-size: .76rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+    .status { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: .8rem; }
+    .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px rgba(250,149,7,.12); }
+    main { padding: 48px 0 64px; }
+    .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 0; align-items: stretch; overflow: hidden; border-radius: calc(var(--radius) + 10px); background: var(--green); box-shadow: 0 24px 60px rgba(46,70,24,.12); }
+    .portrait {
+      position: relative; min-height: 520px; overflow: hidden; background: white;
+    }
+    .portrait img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: center; display: block; }
+    .portrait-badge { position: absolute; z-index: 2; top: 22px; left: 22px; color: white; background: var(--orange); border-radius: 999px; padding: 7px 12px; font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+    .intro-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(30px, 5vw, 64px); }
+    h1 { margin: 0; max-width: 720px; color: white; font-size: clamp(3.4rem, 8.4vw, 7.2rem); line-height: .86; letter-spacing: -.065em; font-weight: 700; text-wrap: balance; }
+    h1 .accent { color: var(--orange); }
+    .lede { max-width: 590px; margin: 28px 0 0; color: rgba(255,255,255,.88); font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+    .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 34px; }
+    .link-card {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      min-height: 72px; padding: 15px 18px; border: 2px solid transparent; border-radius: 18px;
+      color: var(--ink); text-decoration: none; background: white;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .link-card:hover, .link-card:focus-visible { transform: translateY(-3px); border-color: var(--orange); outline: none; }
+    .link-label { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+    .icon { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; color: var(--green); font-size: .73rem; font-weight: 700; }
+    .arrow { font-size: 1.25rem; color: var(--green); }
+    .section { margin-top: 82px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 22px; }
+    .section-kicker { color: var(--orange); }
+    h2 { margin: 8px 0 0; color: var(--green); font-size: clamp(2rem, 5vw, 4.2rem); line-height: .96; letter-spacing: -.045em; }
+    .section-note { margin: 0; max-width: 320px; color: var(--muted); font-size: .9rem; }
+    .featured {
+      display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); min-height: 420px;
+      overflow: hidden; border-radius: calc(var(--radius) + 10px); border: 1px solid var(--line); background: white; color: var(--ink);
+    }
+    .episode-art { position: relative; min-height: 330px; overflow: hidden; background: var(--green); }
+    .episode-art::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 42%, rgba(17,17,20,.7)); }
+    .episode-art img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; display: block; }
+    .number { position: absolute; z-index: 2; left: 22px; bottom: 18px; padding: 6px 12px; border: 1px solid rgba(246,242,233,.65); border-radius: 999px; background: rgba(17,17,20,.72); color: var(--paper); font-size: .75rem; font-weight: 900; letter-spacing: .12em; }
+    .episode-copy { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(26px, 4vw, 50px); }
+    .meta { margin: 0 0 18px; color: var(--orange); font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    h3 { margin: 0; font-size: clamp(2rem, 4vw, 3.75rem); line-height: .98; letter-spacing: -.05em; }
+    .summary { margin: 20px 0 0; max-width: 48ch; color: var(--muted); }
+    .listen { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 11px 17px; border: 1px solid var(--green); border-radius: 999px; color: var(--green); text-decoration: none; font-weight: 700; font-size: .9rem; transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .btn.primary { border-color: var(--orange); background: var(--orange); color: white; }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); background: var(--green); color: white; outline: none; }
+    .recommendations { margin-top: 52px; }
+    .recommendations-title { display: flex; justify-content: space-between; gap: 20px; align-items: center; margin-bottom: 16px; }
+    .recommendations h3 { font-size: clamp(1.5rem, 3vw, 2.3rem); }
+    .episode-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+    .mini {
+      display: flex; flex-direction: column; min-height: 250px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: white; text-decoration: none;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+    .mini:hover, .mini:focus-visible { border-color: var(--orange); transform: translateY(-4px); outline: none; }
+    .mini-num { color: var(--orange); font-size: .82rem; font-weight: 900; letter-spacing: .12em; }
+    .mini h4 { margin: auto 0 14px; font-size: 1.35rem; line-height: 1.08; letter-spacing: -.03em; }
+    .mini-footer { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: .82rem; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 34px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+    .toast { position: fixed; left: 50%; bottom: 22px; z-index: 10; transform: translate(-50%, 130%); opacity: 0; width: min(420px, calc(100% - 32px)); padding: 13px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--ink); color: var(--paper); text-align: center; font-weight: 700; transition: .25s ease; pointer-events: none; }
+    .toast.show { transform: translate(-50%,0); opacity: 1; }
+    @media (max-width: 820px) {
+      main { padding-top: 28px; }
+      .intro { grid-template-columns: 1fr; }
+      .portrait { min-height: 300px; order: 2; }
+      .portrait img { min-height: 300px; }
+      .intro-copy { order: 1; }
+      .featured { grid-template-columns: 1fr; }
+      .episode-art { min-height: 250px; }
+      .episode-grid { grid-template-columns: 1fr; }
+      .mini { min-height: 175px; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 22px, 1120px); }
+      .topbar { min-height: 68px; }
+      .status span { display: none; }
+      h1 { font-size: clamp(3.25rem, 19vw, 5.2rem); }
+      .links { grid-template-columns: 1fr; }
+      .section { margin-top: 62px; }
+      .section-head { display: block; }
+      .section-note { margin-top: 15px; }
+      .episode-copy { padding: 28px 22px; }
+      footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <img class="brand-logo" src="image/logo.png">
+    <div class="status"><span>Nuevo episodio disponible</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="portrait"><img src="image/frutas.png" alt="Frutos y hojas de palma aceitera"><span class="portrait-badge">Noticias + Podcast</span></div>
+      <div class="intro-copy">
+        <h1 id="page-title">La palma, <span class="accent">al día.</span></h1>
+        <p class="lede" id="intro-copy">Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.</p>
+        <nav class="links" aria-label="Enlaces principales" id="main-links"></nav>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="latest-heading">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow section-kicker">Recién publicado</p>
+          <h2 id="latest-heading">Último episodio</h2>
+        </div>
+        <p class="section-note">El contenido más reciente siempre ocupa este lugar. Puedes actualizarlo con cada estreno.</p>
+      </div>
+      <article class="featured">
+        <div class="episode-art"><img id="latest-image" src="https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg" alt="Portada del episodio más reciente de Viviendo Entre Palmas"><span class="number" id="latest-number">EP. 008</span></div>
+        <div class="episode-copy">
+          <div>
+            <p class="meta" id="latest-meta">VIVIENDO ENTRE PALMAS · EP. 008</p>
+            <h3 id="latest-title">Underplanting: la falsa promesa del negocio de la palma aceitera</h3>
+            <p class="summary" id="latest-summary">Una conversación que pone bajo la lupa el underplanting y sus implicaciones para el negocio de la palma aceitera.</p>
+          </div>
+          <div class="listen" id="listen-links"></div>
+        </div>
+      </article>
+
+      <div class="recommendations" aria-labelledby="recommended-heading">
+        <div class="recommendations-title">
+          <h3 id="recommended-heading">También recomendamos</h3>
+          <p class="eyebrow">Selección editorial</p>
+        </div>
+        <div class="episode-grid" id="episode-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span id="brand-footer">© 2026 Palma Al Día</span>
+    <span>Información que cultiva decisiones.</span>
+  </footer>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+
+  <script>
+    /* EDITA SOLO ESTE BLOQUE PARA RENOVAR LOS ENLACES Y EPISODIOS */
+    const content = {
+      brand: "Palma Al Día",
+      intro: "Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.",
+      links: [
+        { label: "Web en construcción", short: "WEB", url: "https://palmaaldia.com/" },
+        { label: "Instagram", short: "IG", url: "https://www.instagram.com/palmaaldia/" },
+        { label: "WhatsApp", short: "WA", url: "https://wa.me/584245686789" },
+        { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" }
+      ],
+      latest: {
+        number: "EP. 008",
+        image: "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
+        meta: "VIVIENDO ENTRE PALMAS · EP. 008",
+        title: "Underplanting: la falsa promesa del negocio de la palma aceitera",
+        summary: "Una conversación que pone bajo la lupa el underplanting y sus implicaciones para el negocio de la palma aceitera.",
+        platforms: [
+          { label: "Ver episodio", url: "https://www.youtube.com/watch?v=kXXuxv9rHPE", primary: true },
+          { label: "Canal de YouTube", url: "https://www.youtube.com/@Palmaaldia", primary: false }
+        ]
+      },
+      promoted: [
+        { number: "EP. 007", title: "El biochar es la oportunidad para transformar la palma en Venezuela", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=N0Tx9yvKHDU" },
+        { number: "EP. 006", title: "Las pérdidas que genera un fruto de palma de baja calidad", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=-DgV6JoWCI0" },
+        { number: "EP. 005", title: "¿Quién define el precio de la fruta?", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=L5_gbszoDvs" }
+      ]
+    };
+
+    const toast = document.querySelector("#toast");
+    let toastTimer;
+    function placeholderNotice(event) {
+      if (event.currentTarget.dataset.ready === "false") {
+        event.preventDefault();
+        toast.textContent = "Este enlace está listo para conectar con tu URL definitiva.";
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+      }
+    }
+    function safeLink(url) { return url && /^(https?:\/\/|mailto:|tel:)/i.test(url) ? url : "#"; }
+    function linkState(url) { return url && /^(https?:\/\/|mailto:|tel:)/i.test(url) ? "true" : "false"; }
+
+    document.querySelector("#brand-footer").textContent = `© ${new Date().getFullYear()} ${content.brand}`;
+    document.querySelector("#intro-copy").textContent = content.intro;
+    document.title = `${content.brand} — Enlaces y podcast`;
+
+    document.querySelector("#main-links").innerHTML = content.links.map(item => `
+      <a class="link-card" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+        <span class="link-label"><span class="icon" aria-hidden="true">${item.short}</span>${item.label}</span><span class="arrow" aria-hidden="true">↗</span>
+      </a>`).join("");
+
+    document.querySelector("#latest-number").textContent = content.latest.number;
+    document.querySelector("#latest-image").src = content.latest.image;
+    document.querySelector("#latest-meta").textContent = content.latest.meta;
+    document.querySelector("#latest-title").textContent = content.latest.title;
+    document.querySelector("#latest-summary").textContent = content.latest.summary;
+    document.querySelector("#listen-links").innerHTML = content.latest.platforms.map(item => `
+      <a class="btn ${item.primary ? "primary" : ""}" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.label}</a>`).join("");
+
+    document.querySelector("#episode-grid").innerHTML = content.promoted.map(item => `
+      <a class="mini" href="${safeLink(item.url)}" data-ready="${linkState(item.url)}" ${item.url ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+        <span class="mini-num">${item.number}</span><h4>${item.title}</h4><span class="mini-footer"><span>${item.duration}</span><span aria-hidden="true">Escuchar ↗</span></span>
+      </a>`).join("");
+    document.querySelectorAll("[data-ready]").forEach(el => el.addEventListener("click", placeholderNotice));
+  </script>
+</body>
+</html>

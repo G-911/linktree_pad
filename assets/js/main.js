@@ -13,6 +13,7 @@ const content = {
   latest: {
     number: "EP. 008",
     image: "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
+    imageAlt: "Portada del episodio más reciente de Viviendo Entre Palmas",
     meta: "VIVIENDO ENTRE PALMAS · EP. 008",
     title: "Underplanting: la falsa promesa del negocio de la palma aceitera",
     summary: "Una conversación que pone bajo la lupa el underplanting y sus implicaciones para el negocio de la palma aceitera.",
@@ -84,9 +85,12 @@ function renderLinks() {
 }
 
 function renderLatest() {
-  const { number, image, meta, title, summary, platforms } = content.latest;
+  const { number, image, imageAlt, meta, title, summary, platforms } = content.latest;
 
-  $("#latest-image").src = image;
+  const cover = $("#latest-image");
+  cover.src = image;
+  cover.alt = imageAlt;
+
   $("#latest-number").textContent = number;
   $("#latest-meta").textContent = meta;
   $("#latest-title").textContent = title;

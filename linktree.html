@@ -21,7 +21,7 @@
       <div class="portrait"><img src="assets/img/frutas.png" alt="Frutos y hojas de palma aceitera"><span class="portrait-badge">Noticias + Podcast</span></div>
       <div class="intro-copy">
         <h1 id="page-title">La palma, <span class="accent">al día.</span></h1>
-        <p class="lede" id="intro-copy">Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.</p>
+        <p class="lede" id="intro-copy"></p>
         <nav class="links" aria-label="Enlaces principales" id="main-links"></nav>
       </div>
     </section>
@@ -35,12 +35,16 @@
         <p class="section-note">El contenido más reciente siempre ocupa este lugar. Puedes actualizarlo con cada estreno.</p>
       </div>
       <article class="featured">
-        <div class="episode-art"><img id="latest-image" src="https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg" alt="Portada del episodio más reciente de Viviendo Entre Palmas"><span class="number" id="latest-number">EP. 008</span></div>
+        <div class="episode-art">
+          <!-- src y alt los define assets/js/main.js; aquí va un pixel transparente como marcador -->
+          <img id="latest-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+          <span class="number" id="latest-number"></span>
+        </div>
         <div class="episode-copy">
           <div>
-            <p class="meta" id="latest-meta">VIVIENDO ENTRE PALMAS · EP. 008</p>
-            <h3 id="latest-title">Underplanting: la falsa promesa del negocio de la palma aceitera</h3>
-            <p class="summary" id="latest-summary">Una conversación que pone bajo la lupa el underplanting y sus implicaciones para el negocio de la palma aceitera.</p>
+            <p class="meta" id="latest-meta"></p>
+            <h3 id="latest-title"></h3>
+            <p class="summary" id="latest-summary"></p>
           </div>
           <div class="listen" id="listen-links"></div>
         </div>
@@ -57,7 +61,7 @@
   </main>
 
   <footer class="shell">
-    <span id="brand-footer">© 2026 Palma Al Día</span>
+    <span id="brand-footer"></span>
     <span>Información que cultiva decisiones.</span>
   </footer>
   <div class="toast" role="status" aria-live="polite" id="toast"></div>

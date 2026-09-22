@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5B8726">
+  <title>Palma Al Día — Enlaces y podcast</title>
+  <meta name="description" content="Todos nuestros enlaces y episodios destacados en un solo lugar.">
+  <link rel="icon" type="image/png" href="assets/img/palma-al-dia-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="shell topbar">
+    <img class="brand-logo" src="assets/img/logo.png" alt="Palma Al Día">
+    <div class="status"><span>Nuevo episodio disponible</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="portrait">
+        <img src="assets/img/frutas.png" alt="Frutos y hojas de palma aceitera">
+        <span class="portrait-badge">Noticias + Podcast</span>
+      </div>
+      <div class="intro-copy">
+        <h1 id="page-title">La palma, <span class="accent">al día.</span></h1>
+        <p class="lede" id="intro-copy"></p>
+        <nav class="links" aria-label="Enlaces principales" id="main-links"></nav>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="latest-heading">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow section-kicker">Recién publicado</p>
+          <h2 id="latest-heading">Último episodio</h2>
+        </div>
+        <p class="section-note">El contenido más reciente siempre ocupa este lugar. Puedes actualizarlo con cada estreno.</p>
+      </div>
+
+      <article class="featured">
+        <div class="episode-art">
+          <!-- src y alt los define assets/js/main.js; aquí va un pixel transparente como marcador -->
+          <img id="latest-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+          <span class="number" id="latest-number"></span>
+        </div>
+        <div class="episode-copy">
+          <div>
+            <p class="meta" id="latest-meta"></p>
+            <h3 id="latest-title"></h3>
+            <p class="summary" id="latest-summary"></p>
+          </div>
+          <div class="listen" id="listen-links"></div>
+        </div>
+      </article>
+
+      <div class="recommendations" aria-labelledby="recommended-heading">
+        <div class="recommendations-title">
+          <h3 id="recommended-heading">También recomendamos</h3>
+          <p class="eyebrow">Selección editorial</p>
+        </div>
+        <div class="episode-grid" id="episode-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span id="brand-footer"></span>
+    <span>Información que cultiva decisiones.</span>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+</body>
+</html>

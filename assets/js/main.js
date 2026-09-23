@@ -1,9 +1,9 @@
 /* ============================================================
    EDITA SOLO ESTE BLOQUE PARA RENOVAR LOS ENLACES Y EPISODIOS
    ============================================================ */
-// Enlace del podcast en Spotify. Mientras esté vacío, los botones de Spotify
-// muestran el aviso de "enlace por conectar".
-const SPOTIFY_URL = "";
+// YouTube Music abre los mismos vídeos del canal: basta con el ID del vídeo.
+const YT_MUSIC_CHANNEL = "https://music.youtube.com/channel/UCo2-SOFL1tcb0Ib0GaK4iog";
+const ytMusicUrl = (id) => `https://music.youtube.com/watch?v=${encodeURIComponent(id)}`;
 
 const content = {
   brand: "Palma Al Día",
@@ -13,7 +13,7 @@ const content = {
     { label: "Instagram", short: "IG", url: "https://www.instagram.com/palmaaldia/" },
     { label: "WhatsApp", short: "WA", url: "https://wa.me/584245686789" },
     { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" },
-    { label: "Spotify", short: "SP", url: SPOTIFY_URL }
+    { label: "YouTube Music", short: "YTM", url: YT_MUSIC_CHANNEL }
   ],
   // Los episodios se leen de este archivo, que GitHub Actions regenera desde YouTube
   // (ver scripts/actualizar-youtube.mjs). Si no carga, se usa el respaldo de abajo.
@@ -21,6 +21,7 @@ const content = {
   fallback: {
     series: "Viviendo entre Palmas",
     latest: {
+      id: "kXXuxv9rHPE",
       number: 8,
       title: "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera",
       description: "En este episodio de Viviendo entre Palmas, conversamos con el ingeniero Álvaro Carmona sobre la renovación de plantaciones de palma aceitera.",
@@ -106,7 +107,7 @@ function renderLatest({ series, latest }) {
 
   const platforms = [
     { label: "Ver episodio", url: latest.url, primary: true },
-    { label: "Escuchar en Spotify", url: SPOTIFY_URL, primary: false }
+    { label: "Escuchar en YouTube Music", url: ytMusicUrl(latest.id), primary: false }
   ];
   $("#listen-links").innerHTML = platforms.map((item) => `
     <a class="btn ${item.primary ? "primary" : ""}" ${linkAttrs(item.url)}>${esc(item.label)}</a>`).join("");
@@ -132,7 +133,7 @@ function renderTop({ top }) {
         </details>` : ""}
         <div class="mini-actions">
           <a class="btn primary" ${linkAttrs(item.url)}>Ver</a>
-          <a class="btn" ${linkAttrs(SPOTIFY_URL)}>Escuchar</a>
+          <a class="btn" ${linkAttrs(ytMusicUrl(item.id))}>Escuchar</a>
         </div>
       </div>
     </article>`).join("");

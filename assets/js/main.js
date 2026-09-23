@@ -10,23 +10,22 @@ const content = {
     { label: "WhatsApp", short: "WA", url: "https://wa.me/584245686789" },
     { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" }
   ],
-  latest: {
-    number: "EP. 008",
-    image: "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
-    imageAlt: "Portada del episodio más reciente de Viviendo Entre Palmas",
-    meta: "VIVIENDO ENTRE PALMAS · EP. 008",
-    title: "Underplanting: la falsa promesa del negocio de la palma aceitera",
-    summary: "Una conversación que pone bajo la lupa el underplanting y sus implicaciones para el negocio de la palma aceitera.",
-    platforms: [
-      { label: "Ver episodio", url: "https://www.youtube.com/watch?v=kXXuxv9rHPE", primary: true },
-      { label: "Canal de YouTube", url: "https://www.youtube.com/@Palmaaldia", primary: false }
-    ]
-  },
-  promoted: [
-    { number: "EP. 007", title: "El biochar es la oportunidad para transformar la palma en Venezuela", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=N0Tx9yvKHDU" },
-    { number: "EP. 006", title: "Las pérdidas que genera un fruto de palma de baja calidad", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=-DgV6JoWCI0" },
-    { number: "EP. 005", title: "¿Quién define el precio de la fruta?", duration: "Ver episodio", url: "https://www.youtube.com/watch?v=L5_gbszoDvs" }
-  ]
+  channel: { label: "Canal de YouTube", url: "https://www.youtube.com/@Palmaaldia" },
+  // Los episodios se leen de este archivo, que GitHub Actions regenera desde YouTube
+  // (ver scripts/actualizar-youtube.mjs). Si no carga, se usa el respaldo de abajo.
+  episodesUrl: "assets/data/youtube.json",
+  fallback: {
+    series: "Viviendo entre Palmas",
+    latest: {
+      number: 8,
+      title: "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera",
+      description: "En este episodio de Viviendo entre Palmas, conversamos con el ingeniero Álvaro Carmona sobre la renovación de plantaciones de palma aceitera.",
+      thumbnail: "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
+      url: "https://www.youtube.com/watch?v=kXXuxv9rHPE",
+      published: "2026-09-10T23:00:06+00:00"
+    },
+    top: []
+  }
 };
 
 /* ============================================================
@@ -84,32 +83,65 @@ function renderLinks() {
     </a>`).join("");
 }
 
-function renderLatest() {
-  const { number, image, imageAlt, meta, title, summary, platforms } = content.latest;
+const fmtViews = new Intl.NumberFormat("es");
+const fmtDate = new Intl.DateTimeFormat("es", { day: "numeric", month: "long", year: "numeric" });
 
+function renderLatest({ series, latest }) {
   const cover = $("#latest-image");
-  cover.src = image;
-  cover.alt = imageAlt;
+  cover.src = latest.thumbnail;
+  cover.alt = `Miniatura del episodio ${latest.number}: ${latest.title}`;
 
-  $("#latest-number").textContent = number;
-  $("#latest-meta").textContent = meta;
-  $("#latest-title").textContent = title;
-  $("#latest-summary").textContent = summary;
+  $("#latest-number").textContent = `EP. ${latest.number}`;
+  $("#latest-meta").textContent = [series, `EP. ${latest.number}`, latest.published && fmtDate.format(new Date(latest.published))]
+    .filter(Boolean).join(" · ");
+  $("#latest-title").textContent = latest.title;
 
+  const summary = $("#latest-summary");
+  summary.textContent = latest.description;
+  summary.classList.remove("open");
+  const toggle = $("#summary-toggle");
+  toggle.textContent = "Leer más";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.hidden = summary.scrollHeight <= summary.clientHeight + 1;
+
+  const platforms = [
+    { label: "Ver episodio", url: latest.url, primary: true },
+    { ...content.channel, primary: false }
+  ];
   $("#listen-links").innerHTML = platforms.map((item) => `
     <a class="btn ${item.primary ? "primary" : ""}" ${linkAttrs(item.url)}>${esc(item.label)}</a>`).join("");
 }
 
-function renderPromoted() {
-  $("#episode-grid").innerHTML = content.promoted.map((item) => `
+function renderTop({ top }) {
+  $("#episode-grid").innerHTML = top.map((item, index) => `
     <a class="mini" ${linkAttrs(item.url)}>
-      <span class="mini-num">${esc(item.number)}</span>
+      <span class="mini-head">
+        <span class="mini-rank">Top ${index + 1}</span>
+        <span class="mini-num">EP. ${esc(item.number)}</span>
+      </span>
       <h4>${esc(item.title)}</h4>
       <span class="mini-footer">
-        <span>${esc(item.duration)}</span>
-        <span aria-hidden="true">Escuchar ↗</span>
+        <span>${fmtViews.format(item.views)} ${item.views === 1 ? "vista" : "vistas"}</span>
+        <span aria-hidden="true">Ver ↗</span>
       </span>
     </a>`).join("");
+  $("#recommendations").hidden = top.length === 0;
+}
+
+async function loadEpisodes() {
+  try {
+    const res = await fetch(content.episodesUrl, { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
+    return await res.json();
+  } catch {
+    return content.fallback;
+  }
+}
+
+function bindLinks() {
+  document.querySelectorAll("[data-ready]").forEach((el) => {
+    el.addEventListener("click", placeholderNotice);
+  });
 }
 
 /* ============================================================
@@ -117,9 +149,17 @@ function renderPromoted() {
    ============================================================ */
 renderHeader();
 renderLinks();
-renderLatest();
-renderPromoted();
+renderLatest(content.fallback);
+renderTop(content.fallback);
 
-document.querySelectorAll("[data-ready]").forEach((el) => {
-  el.addEventListener("click", placeholderNotice);
+$("#summary-toggle").addEventListener("click", (event) => {
+  const open = $("#latest-summary").classList.toggle("open");
+  event.currentTarget.textContent = open ? "Leer menos" : "Leer más";
+  event.currentTarget.setAttribute("aria-expanded", open);
+});
+
+loadEpisodes().then((data) => {
+  renderLatest(data);
+  renderTop(data);
+  bindLinks();
 });

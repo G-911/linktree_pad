@@ -179,7 +179,34 @@ main {
   padding: clamp(30px, 5vw, 64px);
 }
 
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  align-self: flex-start;
+  margin: 0 0 22px;
+  padding: 7px 14px 7px 10px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+  color: var(--paper);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hero-kicker::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
 h1 {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   max-width: 720px;
   color: var(--paper);
@@ -187,11 +214,57 @@ h1 {
   line-height: .86;
   letter-spacing: -.065em;
   font-weight: 700;
-  text-wrap: balance;
 }
 
-h1 .accent {
+.h1-line {
+  display: block;
+  animation: rise .7s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.h1-accent {
+  position: relative;
+  z-index: 0;
+  align-self: flex-start;
+  padding-right: .12em;
   color: var(--orange);
+  font-style: italic;
+  animation-delay: .12s;
+}
+
+/* Subrayado de trazo irregular, como una pincelada bajo "al día" */
+.h1-accent::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -.04em;
+  right: 0;
+  bottom: .02em;
+  height: .2em;
+  border-radius: 999px 40% 999px 30%;
+  background: rgba(255, 255, 255, .16);
+  transform: rotate(-1.5deg);
+  transform-origin: left;
+  animation: stroke .6s .45s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.h1-dot {
+  display: inline-block;
+  width: .16em;
+  height: .16em;
+  margin-left: .06em;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 0 .06em rgba(255, 255, 255, .22);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(.25em); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes stroke {
+  from { transform: rotate(-1.5deg) scaleX(0); }
+  to { transform: rotate(-1.5deg) scaleX(1); }
 }
 
 .lede {
@@ -366,9 +439,38 @@ h3 {
 }
 
 .summary {
+  display: -webkit-box;
   margin: 20px 0 0;
   max-width: 48ch;
+  overflow: hidden;
   color: var(--muted);
+  white-space: pre-line;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+.summary.open {
+  display: block;
+}
+
+.summary-toggle {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--green);
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.summary-toggle:hover,
+.summary-toggle:focus-visible {
+  color: var(--orange);
 }
 
 .listen {
@@ -449,6 +551,24 @@ h3 {
   border-color: var(--orange);
   transform: translateY(-4px);
   outline: none;
+}
+
+.mini-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mini-rank {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--paper);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 .mini-num {
@@ -565,6 +685,10 @@ footer {
     display: none;
   }
 
+  .portrait {
+    display: none;
+  }
+
   h1 {
     font-size: clamp(3.25rem, 19vw, 5.2rem);
   }
@@ -603,5 +727,7 @@ footer {
   *::before,
   *::after {
     transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-delay: 0s !important;
   }
 }

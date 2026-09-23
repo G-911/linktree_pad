@@ -20,10 +20,14 @@
     <section class="intro" aria-labelledby="page-title">
       <div class="portrait">
         <img src="assets/img/frutas.png" alt="Frutos y hojas de palma aceitera">
-        <span class="portrait-badge">Noticias + Podcast</span>
+        <span class="portrait-badge">Podcast</span>
       </div>
       <div class="intro-copy">
-        <h1 id="page-title">Palma <br> al día</h1>
+        <p class="hero-kicker">Palmicultura venezolana</p>
+        <h1 id="page-title">
+          <span class="h1-line">Palma</span>
+          <span class="h1-line h1-accent">al día<span class="h1-dot" aria-hidden="true"></span></span>
+        </h1>
         <p class="lede" id="intro-copy"></p>
         <nav class="links" aria-label="Enlaces principales" id="main-links"></nav>
       </div>
@@ -48,14 +52,16 @@
             <p class="meta" id="latest-meta"></p>
             <h3 id="latest-title"></h3>
             <p class="summary" id="latest-summary"></p>
+            <button class="summary-toggle" type="button" id="summary-toggle" aria-controls="latest-summary" aria-expanded="false" hidden>Leer más</button>
           </div>
           <div class="listen" id="listen-links"></div>
         </div>
       </article>
 
-      <div class="recommendations" aria-labelledby="recommended-heading">
+      <div class="recommendations" id="recommendations" aria-labelledby="recommended-heading">
         <div class="recommendations-title">
-          <h3 id="recommended-heading">Recomendaciones</h3>
+          <h3 id="recommended-heading">Los más vistos</h3>
+          <p class="eyebrow section-kicker">Top de la audiencia</p>
         </div>
         <div class="episode-grid" id="episode-grid"></div>
       </div>

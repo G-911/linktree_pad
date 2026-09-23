@@ -511,6 +511,13 @@ h3 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.mini:hover,
+.mini:focus-within {
+  border-color: var(--orange);
+  transform: translateY(-4px);
 }
 
 .mini-thumb {

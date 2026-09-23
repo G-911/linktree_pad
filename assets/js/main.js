@@ -1,6 +1,10 @@
 /* ============================================================
    EDITA SOLO ESTE BLOQUE PARA RENOVAR LOS ENLACES Y EPISODIOS
    ============================================================ */
+// Enlace del podcast en Spotify. Mientras esté vacío, los botones de Spotify
+// muestran el aviso de "enlace por conectar".
+const SPOTIFY_URL = "";
+
 const content = {
   brand: "Palma Al Día",
   intro: "Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.",
@@ -8,7 +12,8 @@ const content = {
     { label: "Web en construcción", short: "WEB", url: "https://palmaaldia.com/" },
     { label: "Instagram", short: "IG", url: "https://www.instagram.com/palmaaldia/" },
     { label: "WhatsApp", short: "WA", url: "https://wa.me/584245686789" },
-    { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" }
+    { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" },
+    { label: "Spotify", short: "SP", url: SPOTIFY_URL }
   ],
   channel: { label: "Canal de YouTube", url: "https://www.youtube.com/@Palmaaldia" },
   // Los episodios se leen de este archivo, que GitHub Actions regenera desde YouTube
@@ -106,6 +111,7 @@ function renderLatest({ series, latest }) {
 
   const platforms = [
     { label: "Ver episodio", url: latest.url, primary: true },
+    { label: "Escuchar en Spotify", url: SPOTIFY_URL, primary: false },
     { ...content.channel, primary: false }
   ];
   $("#listen-links").innerHTML = platforms.map((item) => `
@@ -114,17 +120,18 @@ function renderLatest({ series, latest }) {
 
 function renderTop({ top }) {
   $("#episode-grid").innerHTML = top.map((item, index) => `
-    <a class="mini" ${linkAttrs(item.url)}>
+    <article class="mini">
       <span class="mini-head">
         <span class="mini-rank">Top ${index + 1}</span>
         <span class="mini-num">EP. ${esc(item.number)}</span>
       </span>
       <h4>${esc(item.title)}</h4>
-      <span class="mini-footer">
-        <span>${fmtViews.format(item.views)} ${item.views === 1 ? "vista" : "vistas"}</span>
-        <span aria-hidden="true">Ver ↗</span>
-      </span>
-    </a>`).join("");
+      <p class="mini-views">${fmtViews.format(item.views)} ${item.views === 1 ? "vista" : "vistas"}</p>
+      <div class="mini-actions">
+        <a class="btn primary" ${linkAttrs(item.url)}>Ver</a>
+        <a class="btn" ${linkAttrs(SPOTIFY_URL)}>Escuchar</a>
+      </div>
+    </article>`).join("");
   $("#recommendations").hidden = top.length === 0;
 }
 

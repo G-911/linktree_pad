@@ -106,23 +106,6 @@ a {
   text-transform: uppercase;
 }
 
-.status {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--muted);
-  font-size: .8rem;
-}
-
-.status::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--orange);
-  box-shadow: 0 0 0 5px rgba(250, 149, 7, .12);
-}
-
 /* ============================================================
    Portada
    ============================================================ */
@@ -333,7 +316,7 @@ h1 {
 }
 
 h2 {
-  margin: 8px 0 0;
+  margin: 0;
   color: var(--green);
   font-size: clamp(2rem, 5vw, 4.2rem);
   line-height: .96;
@@ -706,10 +689,6 @@ footer {
 
   .topbar {
     min-height: 68px;
-  }
-
-  .status span {
-    display: none;
   }
 
   h1 {

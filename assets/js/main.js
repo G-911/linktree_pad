@@ -9,7 +9,7 @@ const content = {
   brand: "Palma Al Día",
   intro: "Actualidad, análisis y conversaciones sobre la palmicultura venezolana. Todo en un mismo lugar.",
   links: [
-    { label: "Web en construcción", short: "WEB", url: "https://palmaaldia.com/" },
+    { label: "Web", short: "WEB", url: "https://palmaaldia.com/" },
     { label: "Instagram", short: "IG", url: "https://www.instagram.com/palmaaldia/" },
     { label: "WhatsApp", short: "WA", url: "https://wa.me/584245686789" },
     { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" },

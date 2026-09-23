@@ -278,6 +278,8 @@ h1 {
 /* Con un número impar de enlaces, el último ocupa toda la fila */
 .link-card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 12px) / 2);
 }
 
 .link-card:hover,
@@ -420,39 +422,25 @@ h3 {
   letter-spacing: -.05em;
 }
 
+/* Altura fija: la descripción completa de YouTube se desplaza dentro de su caja
+   sin estirar el recuadro del episodio. */
 .summary {
-  display: -webkit-box;
+  height: 10.5em;
   margin: 20px 0 0;
   max-width: 48ch;
-  overflow: hidden;
+  padding-right: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   color: var(--muted);
   white-space: pre-line;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  line-clamp: 5;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
 }
 
-.summary.open {
-  display: block;
-}
-
-.summary-toggle {
-  margin-top: 10px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--green);
-  font: inherit;
-  font-size: .88rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  cursor: pointer;
-}
-
-.summary-toggle:hover,
-.summary-toggle:focus-visible {
-  color: var(--orange);
+.summary:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .listen {
@@ -628,16 +616,7 @@ footer {
   }
 
   .portrait {
-    min-height: 300px;
-    order: 2;
-  }
-
-  .portrait img {
-    min-height: 300px;
-  }
-
-  .intro-copy {
-    order: 1;
+    display: none;
   }
 
   .featured {
@@ -670,16 +649,16 @@ footer {
     display: none;
   }
 
-  .portrait {
-    display: none;
-  }
-
   h1 {
     font-size: clamp(3.25rem, 19vw, 5.2rem);
   }
 
   .links {
     grid-template-columns: 1fr;
+  }
+
+  .link-card:last-child:nth-child(odd) {
+    width: auto;
   }
 
   .section {

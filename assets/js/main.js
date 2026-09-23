@@ -15,7 +15,6 @@ const content = {
     { label: "YouTube", short: "YT", url: "https://www.youtube.com/@Palmaaldia" },
     { label: "Spotify", short: "SP", url: SPOTIFY_URL }
   ],
-  channel: { label: "Canal de YouTube", url: "https://www.youtube.com/@Palmaaldia" },
   // Los episodios se leen de este archivo, que GitHub Actions regenera desde YouTube
   // (ver scripts/actualizar-youtube.mjs). Si no carga, se usa el respaldo de abajo.
   episodesUrl: "assets/data/youtube.json",
@@ -103,16 +102,11 @@ function renderLatest({ series, latest }) {
 
   const summary = $("#latest-summary");
   summary.textContent = latest.description;
-  summary.classList.remove("open");
-  const toggle = $("#summary-toggle");
-  toggle.textContent = "Leer más";
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.hidden = summary.scrollHeight <= summary.clientHeight + 1;
+  summary.scrollTop = 0;
 
   const platforms = [
     { label: "Ver episodio", url: latest.url, primary: true },
-    { label: "Escuchar en Spotify", url: SPOTIFY_URL, primary: false },
-    { ...content.channel, primary: false }
+    { label: "Escuchar en Spotify", url: SPOTIFY_URL, primary: false }
   ];
   $("#listen-links").innerHTML = platforms.map((item) => `
     <a class="btn ${item.primary ? "primary" : ""}" ${linkAttrs(item.url)}>${esc(item.label)}</a>`).join("");
@@ -158,12 +152,6 @@ renderHeader();
 renderLinks();
 renderLatest(content.fallback);
 renderTop(content.fallback);
-
-$("#summary-toggle").addEventListener("click", (event) => {
-  const open = $("#latest-summary").classList.toggle("open");
-  event.currentTarget.textContent = open ? "Leer menos" : "Leer más";
-  event.currentTarget.setAttribute("aria-expanded", open);
-});
 
 loadEpisodes().then((data) => {
   renderLatest(data);

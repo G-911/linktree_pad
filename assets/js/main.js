@@ -115,15 +115,25 @@ function renderLatest({ series, latest }) {
 function renderTop({ top }) {
   $("#episode-grid").innerHTML = top.map((item, index) => `
     <article class="mini">
-      <span class="mini-head">
-        <span class="mini-rank">Top ${index + 1}</span>
-        <span class="mini-num">EP. ${esc(item.number)}</span>
-      </span>
-      <h4>${esc(item.title)}</h4>
-      <p class="mini-views">${fmtViews.format(item.views)} ${item.views === 1 ? "vista" : "vistas"}</p>
-      <div class="mini-actions">
-        <a class="btn primary" ${linkAttrs(item.url)}>Ver</a>
-        <a class="btn" ${linkAttrs(SPOTIFY_URL)}>Escuchar</a>
+      <div class="mini-thumb">
+        <img src="${esc(item.thumbnail)}" alt="" loading="lazy">
+        <span class="mini-head">
+          <span class="mini-rank">Top ${index + 1}</span>
+          <span class="mini-num">EP. ${esc(item.number)}</span>
+        </span>
+      </div>
+      <div class="mini-body">
+        <h4>${esc(item.title)}</h4>
+        <p class="mini-views">${fmtViews.format(item.views)} ${item.views === 1 ? "vista" : "vistas"}</p>
+        ${item.description ? `
+        <details class="mini-desc">
+          <summary>Leer descripción</summary>
+          <p tabindex="0">${esc(item.description)}</p>
+        </details>` : ""}
+        <div class="mini-actions">
+          <a class="btn primary" ${linkAttrs(item.url)}>Ver</a>
+          <a class="btn" ${linkAttrs(SPOTIFY_URL)}>Escuchar</a>
+        </div>
       </div>
     </article>`).join("");
   $("#recommendations").hidden = top.length === 0;

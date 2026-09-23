@@ -507,18 +507,40 @@ h3 {
 .mini {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
-  padding: 22px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
 }
 
+.mini-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--green);
+}
+
+.mini-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .mini-head {
+  position: absolute;
+  inset: 12px 12px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.mini-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 20px 20px;
 }
 
 .mini-rank {
@@ -533,14 +555,17 @@ h3 {
 }
 
 .mini-num {
-  color: var(--orange);
-  font-size: .82rem;
-  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(17, 17, 20, .72);
+  color: var(--paper);
+  font-size: .72rem;
+  font-weight: 700;
   letter-spacing: .12em;
 }
 
 .mini h4 {
-  margin: auto 0 14px;
+  margin: 0 0 8px;
   font-size: 1.35rem;
   line-height: 1.08;
   letter-spacing: -.03em;
@@ -552,11 +577,45 @@ h3 {
   font-size: .82rem;
 }
 
+/* Descripción plegable: cerrada por defecto, con scroll propio al abrirla */
+.mini-desc {
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.mini-desc summary {
+  padding-top: 10px;
+  color: var(--green);
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mini-desc summary:hover,
+.mini-desc summary:focus-visible {
+  color: var(--orange);
+  outline: none;
+}
+
+.mini-desc p {
+  max-height: 11em;
+  margin: 8px 0 0;
+  padding-right: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  color: var(--muted);
+  font-size: .85rem;
+  white-space: pre-line;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
 .mini-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
 }
 
 .mini-actions .btn {
@@ -631,9 +690,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .mini {
-    min-height: 175px;
-  }
 }
 
 @media (max-width: 560px) {
@@ -658,6 +714,7 @@ footer {
   }
 
   .link-card:last-child:nth-child(odd) {
+    justify-self: stretch;
     width: auto;
   }
 

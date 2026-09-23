@@ -89,13 +89,12 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+/* Logo vertical (icono sobre el nombre): se escala por la altura */
 .brand-logo {
   display: block;
-  width: 174px;
-  height: 74px;
-  object-fit: contain;
-  object-position: left center;
-  border-radius: 0 24px 24px 0;
+  width: auto;
+  height: 76px;
+  margin: 8px 0;
 }
 
 .eyebrow {
@@ -680,6 +679,10 @@ footer {
 
   .topbar {
     min-height: 68px;
+  }
+
+  .brand-logo {
+    height: 58px;
   }
 
   h1 {

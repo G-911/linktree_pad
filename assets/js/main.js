@@ -24,7 +24,7 @@ const content = {
       number: 8,
       title: "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera",
       description: "En este episodio de Viviendo entre Palmas, conversamos con el ingeniero Álvaro Carmona sobre la renovación de plantaciones de palma aceitera.",
-      thumbnail: "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
+      thumbnail: "https://i.ytimg.com/vi/kXXuxv9rHPE/maxresdefault.jpg",
       url: "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       published: "2026-09-10T23:00:06+00:00"
     },

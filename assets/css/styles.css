@@ -355,7 +355,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 42%, rgba(17, 17, 20, .7));
+  background: linear-gradient(180deg, transparent 60%, rgba(17, 17, 20, .5));
 }
 
 .episode-art img {

@@ -54,7 +54,18 @@ const episodes = [...feed.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
 
 if (!episodes.length) throw new Error("El feed no trae ningún episodio; no se toca el JSON.");
 
+/** Miniatura más nítida disponible: no todos los vídeos tienen maxres. */
+async function bestThumbnail(id) {
+  for (const quality of ["maxresdefault", "sddefault"]) {
+    const url = `https://i.ytimg.com/vi/${id}/${quality}.jpg`;
+    const head = await fetch(url, { method: "HEAD" }).catch(() => null);
+    if (head?.ok) return url;
+  }
+  return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+}
+
 const [latest] = episodes;
+latest.thumbnail = await bestThumbnail(latest.id);
 const top = episodes
   .filter((video) => video.id !== latest.id)
   .sort((a, b) => b.views - a.views)

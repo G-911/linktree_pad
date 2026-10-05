@@ -4,9 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#5B8726">
+  <!-- Solo paleta clara: evita que el modo oscuro forzado del navegador cambie los colores -->
+  <meta name="color-scheme" content="only light">
   <title>Palma Al Día — Enlaces y podcast</title>
   <meta name="description" content="Todos nuestros enlaces y episodios destacados en un solo lugar.">
   <link rel="icon" type="image/png" href="assets/img/palma-al-dia-icon.png">
+  <link rel="preload" href="assets/fonts/ubuntu.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -22,7 +25,6 @@
         <span class="portrait-badge">Podcast</span>
       </div>
       <div class="intro-copy">
-        <p class="hero-kicker">Palmicultura venezolana</p>
         <h1 id="page-title">
           <span class="h1-line">Palma</span>
           <span class="h1-line h1-accent">Al Día</span>
@@ -58,7 +60,6 @@
       <div class="recommendations" id="recommendations" aria-labelledby="recommended-heading">
         <div class="recommendations-title">
           <h3 id="recommended-heading">Los más vistos</h3>
-          <p class="eyebrow section-kicker">Top de la audiencia</p>
         </div>
         <div class="episode-grid" id="episode-grid"></div>
       </div>

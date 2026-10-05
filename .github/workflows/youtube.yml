@@ -30,6 +30,10 @@ jobs:
           node-version: 22
 
       - run: node scripts/actualizar-youtube.mjs
+        env:
+          # Opcional: con una API key de YouTube Data API v3 se refrescan las vistas de
+          # todo el catálogo, no solo de los 15 vídeos que trae el feed.
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Guardar cambios
         run: |

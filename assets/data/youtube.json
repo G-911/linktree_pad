@@ -3,6 +3,7 @@
   "series": "Viviendo entre Palmas",
   "latest": {
     "id": "kXXuxv9rHPE",
+    "kind": "episode",
     "number": 8,
     "title": "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera",
     "rawTitle": "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera | EP #008 Viviendo Entre Palmas",
@@ -10,22 +11,36 @@
     "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/maxresdefault.jpg",
     "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
     "published": "2026-09-10T23:00:06+00:00",
-    "views": 245
+    "views": 274
   },
   "top": [
     {
-      "id": "WTfj48nmXOs",
-      "number": 1,
-      "title": "El inicio de la palmicultura en el Sur del Lago",
-      "rawTitle": "El inicio de la palmicultura en el Sur del Lago | EP #001 - PILOTO - Viviendo entre palmas",
-      "description": "¿Cómo se construye un cultivo cuando no existe un camino claro?\n¿Quiénes decidieron apostar por la palma aceitera cuando casi nadie creía en ella?\n\nEn este episodio, Álvaro Carmona y Karym Urdaneta recorren la historia temprana de la palmicultura en el Sur del Lago. Entre anécdotas, decisiones difíciles y aprendizajes nacidos del terreno, cuentan cómo comenzó un movimiento agrícola que hoy sostiene a cientos de productores venezolanos.\n\nUna conversación íntima que revela la visión, los aciertos y la determinación que formaron los primeros surcos de la palma aceitera en la región.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector: productores, técnicos y especialistas, comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\n\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas, ideas y aprendizajes que dan forma a la palmicultura en Venezuela. Contenido nacido de la experiencia real, tecnología aplicada y visión de futuro contadas desde quienes viven la palma de cerca.\n\nSi crees en una palmicultura que crece cuando crecemos juntos, acompáñanos. Aquí compartimos historias y aprendizajes que unen al productor venezolano con el futuro que está construyendo.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\nWeb: www.palmaaldia.com",
-      "thumbnail": "https://i.ytimg.com/vi/WTfj48nmXOs/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=WTfj48nmXOs",
-      "published": "2025-12-03T23:06:42+00:00",
-      "views": 188
+      "id": "avxJYA8T71g",
+      "kind": "short",
+      "number": null,
+      "title": "Están cosechando MAL y PERDIENDO rendimiento sin saberlo",
+      "rawTitle": "🚨 Están cosechando MAL y PERDIENDO rendimiento sin saberlo",
+      "description": "En el Episodio 3 de #ViviendoEnntrePalmas, el Ing. Ender Urdaneta lo deja claro:\nla maduración del fruto no es intuición, es criterio técnico.\n\n📊 Ciclos de cosecha bien definidos\n🌧 Ajuste según condiciones climáticas\n🍃 Corte en el punto óptimo\n\nUn error en campo se traduce en menor extracción y pérdida de eficiencia.\n\nAquí no se trata solo de cosechar, se trata de cosechar en el momento correcto.\n\n##PalmaAlDía #AgriculturaVenezolana",
+      "thumbnail": "https://i.ytimg.com/vi/avxJYA8T71g/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/avxJYA8T71g",
+      "published": "2026-04-16T14:51:57+00:00",
+      "views": 340
+    },
+    {
+      "id": "V_2imWtLeW0",
+      "kind": "live",
+      "number": null,
+      "title": "Principios fundamentales en la nutrición vegetal de la palma aceitera | Ing. José Cardozo",
+      "rawTitle": "🔴LIVE | Principios fundamentales en la nutrición vegetal de la palma aceitera | Ing. José Cardozo",
+      "description": "Acompáñanos en esta transmisión en directo del conversatorio-conferencia “Principios fundamentales en la nutrición vegetal de la palma aceitera”, a cargo del Ing. José Álvaro Cardozo.\n\nUn espacio para aprender, actualizar conocimientos y reflexionar sobre la importancia de la nutrición vegetal en el desarrollo y productividad de la palma aceitera.\n\nFecha: 17/04/2026\nHora: 2:00 pm\nLugar: Sede Palmesur\nEvento gratuito\n\nTransmisión en vivo por nuestro canal de YouTube Viviendo entre Palmas.\n\nOrganizan y acompañan esta actividad: Palma Al Día, FEVEPALMA, PalmeSur e INSUAECOL.\n\nSíguenos también en Instagram: @palmaaldia\n\n#PalmaAceitera #NutriciónVegetal #PalmaAlDía #ViviendoEntrePalmas #Palmicultura #Agricultura #EnVivo",
+      "thumbnail": "https://i.ytimg.com/vi/V_2imWtLeW0/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=V_2imWtLeW0",
+      "published": "2026-04-18T08:13:24+00:00",
+      "views": 297
     },
     {
       "id": "N0Tx9yvKHDU",
+      "kind": "episode",
       "number": 7,
       "title": "El BIOCHAR es la OPORTUNIDAD para TRANSFORMAR la palma en Venezuela",
       "rawTitle": "El BIOCHAR es la OPORTUNIDAD para TRANSFORMAR la palma en Venezuela | EP #007 Viviendo Entre Palmas",
@@ -33,18 +48,174 @@
       "thumbnail": "https://i.ytimg.com/vi/N0Tx9yvKHDU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=N0Tx9yvKHDU",
       "published": "2026-07-09T18:58:37+00:00",
-      "views": 158
+      "views": 199
+    }
+  ],
+  "catalog": [
+    {
+      "id": "kXXuxv9rHPE",
+      "kind": "episode",
+      "number": 8,
+      "title": "UNDERPLANTING: La FALSA PROMESA del negocio de la palma aceitera",
+      "description": "En este episodio de Viviendo entre Palmas, conversamos con el ingeniero Álvaro Carmona sobre uno de los desafíos más importantes que enfrenta la industria palmera: la renovación de plantaciones de palma aceitera y las decisiones que pueden definir la productividad de una finca durante las próximas décadas.\n\nUna plantación de palma no es un cultivo de corto plazo. Cada decisión tomada hoy puede impactar los próximos 20, 30 o incluso más años de producción. Por eso, antes de renovar una plantación es necesario analizar factores como la edad del cultivo, la genética utilizada, la densidad de siembra, la sanidad, el drenaje y las condiciones específicas del terreno.\n\nDurante esta conversación analizamos uno de los errores más discutidos en el sector: el underplanting o siembra de nuevas palmas debajo de plantas adultas. El ingeniero explica por qué esta estrategia puede generar problemas relacionados con competencia por luz, desarrollo de las plantas jóvenes, sanidad del cultivo y productividad futura cuando no se aplica bajo un manejo adecuado.\n\nTambién conversamos sobre el papel de la experiencia técnica en la agricultura moderna. La tecnología, los drones y las nuevas herramientas aportan información valiosa, pero el conocimiento acumulado en campo sigue siendo fundamental para interpretar correctamente las condiciones de una plantación.\n\nEste episodio es una invitación a mirar la palmicultura con una visión diferente: no solo producir hoy, sino construir plantaciones más eficientes, sostenibles y preparadas para el futuro.\n\n00:00 | Introducción: el reto de renovar plantaciones de palma\n04:15 | ¿Qué hacer con las plantaciones antiguas?\n05:34 | La genética cambió las reglas del cultivo\n07:20 | Cómo aumentar la vida útil de una plantación\n08:49 | La importancia de manejar edades y variedades\n10:17 | Densidad de siembra: no es una decisión al azar\n11:47 | Cómo decidir qué lotes renovar\n12:16 | El error del underplanting en palma\n14:25 | Cuando la palma joven crece bajo sombra\n16:24 | Enfermedades y riesgos de una mala renovación\n18:44 | El problema de los cultivos envejecidos\n20:29 | Sin oxígeno no hay salud del suelo\n21:14 | Diseñar la renovación como un arquitecto\n22:46 | La palma como recurso: biomasa y economía circular\n27:09 | El futuro está en elegir bien el material de siembra\n\nSi trabajas en el sector palmero o quieres conocer más sobre manejo agronómico, renovación de cultivos, productividad y sostenibilidad, suscríbete a Palma Al Día y acompáñanos en cada episodio de Viviendo entre Palmas.\n\nDéjanos en los comentarios:\n¿Cuál consideras que es el mayor reto para renovar una plantación de palma en Venezuela?",
+      "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
+      "published": "2026-09-10T23:00:06+00:00",
+      "views": 274
+    },
+    {
+      "id": "N0Tx9yvKHDU",
+      "kind": "episode",
+      "number": 7,
+      "title": "El BIOCHAR es la OPORTUNIDAD para TRANSFORMAR la palma en Venezuela",
+      "description": "En este episodio de Viviendo entre Palmas, hablamos con el ingeniero Álvaro Carmona sobre el biochar y su impacto en la palma aceitera.\n\nUn tema clave que puede cambiar la forma en que vemos el suelo y la producción agrícola.\nPorque el futuro del cultivo empieza desde la raíz, donde casi nadie mira.\n\nDurante años se creyó que el suelo solo era soporte, pero hoy sabemos que es un ecosistema complejo. Cuando pierde carbono y vida, la palma también pierde fuerza y productividad.\n\nAquí entenderás por qué cuidar el suelo ya no es opcional.\n\nDescubre cómo el biochar convierte residuos en una solución poderosa.\nMejora el suelo, retiene agua y fortalece la vida microbiológica.\nUna herramienta clave para producir mejor y depender menos de químicos.\n\nEste episodio es una invitación a cambiar la forma de producir palma.\n\n0:00 | Intro\n2:42 | Presentaciones\n3:04 | Biochar y sostenibilidad\n4:15 | Un nuevo enfoque para la palma\n5:49 | Los riegos de agricultura química\n7:18 | Cuando el suelo empieza a avisar\n9:10 | Suelos desnudos y raíces débiles\n11:11 | El desgaste del carbono\n13:29 | Químicos, humus y pérdida de resiliencia\n16:43 | Monocultivo y caída del rendimiento\n18:40 | Buenas prácticas agrícolas\n20:02 | Cambiar exige decisiones radicales\n26:30 | Nace el proyecto del biochar\n34:03 | Qué es realmente el biochar\n46:02 | Biochar, agua y resiliencia del suelo\n57:05 | Residuos que se convierten en valor\n1:09:49 | Venezuela y la oportunidad agrícola\n1:14:06 | Productividad para competir\n1:17:29 | Cierre y llamado a participar\n\nSi eres productor, técnico o estudiante, esto es para ti.\nSuscríbete a Palma Al Día y acompáñanos en este cambio.",
+      "thumbnail": "https://i.ytimg.com/vi/N0Tx9yvKHDU/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=N0Tx9yvKHDU",
+      "published": "2026-07-09T18:58:37+00:00",
+      "views": 199
+    },
+    {
+      "id": "Oi6qQQK-Uqw",
+      "kind": "short",
+      "number": null,
+      "title": "¿Sabías que PIERDES hasta 12% de fruta por un mal SISTEMA DE DRENAJE?",
+      "description": "El ing. Ender Urdaneta, del equipo de PAD, explica por qué diseñar mal los drenajes puede afectar la cosecha y dejar fruta valiosa sin recolectar.\n\n#EnderUrdaneta #PalmaAlDia #PalmaAceitera #Palmicultura #Drenajes #CosechaDePalma #FrutaDePalma",
+      "thumbnail": "https://i.ytimg.com/vi/Oi6qQQK-Uqw/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/Oi6qQQK-Uqw",
+      "published": "2026-05-18T11:15:36+00:00",
+      "views": 56
+    },
+    {
+      "id": "V2lBG4j51A8",
+      "kind": "short",
+      "number": null,
+      "title": "Cuidar las RAÍCES de tus clutivos es PRESERVAR tu producción",
+      "description": "Un suelo compactado puede limitar su desarrollo, afectar la productividad y poner en riesgo el verdadero potencial de la palma.\n\n#PalmaAlDia #PalmaAceitera #Palmicultura #SueloVivo #Raices #SuelosCompactados #AgriculturaInteligente",
+      "thumbnail": "https://i.ytimg.com/vi/V2lBG4j51A8/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/V2lBG4j51A8",
+      "published": "2026-05-17T12:00:01+00:00",
+      "views": 135
+    },
+    {
+      "id": "xd41ABlC5mk",
+      "kind": "short",
+      "number": null,
+      "title": "Cuidado con lo que aplicas: tu suelo puede quedar contaminado",
+      "description": "Cuidado con lo que aplicas al suelo. El ing. Álvaro Carmona, del equipo PAD, explica el riesgo de metales pesados en suelos Venezolanos. \n#Conferencia #AgroVenezolano #SaludDeLosSuelos #SuelosVenezolanos #PalmaAlDia",
+      "thumbnail": "https://i.ytimg.com/vi/xd41ABlC5mk/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/xd41ABlC5mk",
+      "published": "2026-05-17T00:09:03+00:00",
+      "views": 126
     },
     {
       "id": "-DgV6JoWCI0",
+      "kind": "episode",
       "number": 6,
       "title": "Estas son las PÉRDIDAS que genera un FRUTO de palma de BAJA CALIDAD",
-      "rawTitle": "Estas son las PÉRDIDAS que genera un FRUTO de palma de BAJA CALIDAD | EP #006 Viviendo Entre Palmas",
       "description": "En este episodio de Viviendo entre Palmas, los ingenieros Jorge Maestre y Francisco Otero explican cómo la calidad de la fruta de palma impacta directamente el rendimiento del aceite. Fruta verde, sobremadura, mal cortada o con retrasos en el arrime puede generar pérdidas para el productor, la extractora y toda la cadena palmera.\n\nLa calidad del aceite de palma comienza en el campo, donde cada decisión influye directamente en el resultado final. El momento del corte, el manejo adecuado del cultivo y la selección de fruta en su punto óptimo de madurez son factores clave que determinan el potencial de aceite. Una fruta bien cosechada, transportada a tiempo y sin daños permite obtener mejores rendimientos y menor acidez. Por el contrario, errores como cortar fruta verde o sobremadura reducen la eficiencia. Por eso, el productor juega un papel fundamental en garantizar calidad, rentabilidad y sostenibilidad en toda la cadena palmera.\n\n0:00 | Intro\n1:00 | Desde la rampa de Grasas El Puerto\n2:19 | Por qué importa la calidad del aceite\n3:16 | Así se clasificación de racimos en planta extractora\n4:05 | El problema de los racimos verdes\n6:07 | La pregunta de oro\n6:30 | Cómo funciona el arrime de fruta\n7:39 | Revisión y recepción del camión\n11:15 | El corte define la calidad del fruto de palma\n13:00 | Qué pasa con el fruto de palma verde\n14:11 | Retrasos, sobremadurez y acidez\n18:49 | Así se mide el potencial de aceite\n21:04 | Flux, polinización y laboratorio\n23:17 | Potenciales del Sur del Lago\n25:07 | La magia sucede en el campo\n30:08 | Números de arrime 2025\n34:09 | Recomendaciones finales al productor\n\n#PalmaAceitera #Palmicultura #AceiteDePalma #FrutaDePalma #PalmaAlDía",
       "thumbnail": "https://i.ytimg.com/vi/-DgV6JoWCI0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=-DgV6JoWCI0",
       "published": "2026-05-05T14:57:10+00:00",
-      "views": 131
+      "views": 137
+    },
+    {
+      "id": "MHKU01bueoc",
+      "kind": "short",
+      "number": null,
+      "title": "El SUELO está DESTRUYENDO la CALIDAD del aceite de palma",
+      "description": "La calidad del aceite de palma no empieza en la extractora: empieza en el suelo.\n\nEn esta conversación sincera con el ingeniero Ender Urdaneta, durante el EP4 de Viviendo entre Palmas, hablamos sobre cómo un suelo compactado, debilitado o sin vida biológica puede afectar la nutrición de la planta, la calidad del fruto y el potencial productivo de toda la cadena palmera.\n\nLa palma lo refleja. El fruto lo confirma. Y el aceite termina mostrando las consecuencias.\n\n#PalmaAceitera #Palmicultura #AceiteDePalma #FrutaDePalma #SueloVivo #Agricultura #ProductoresPalmeros #NutriciónVegetal #PalmaAlDía #ViviendoEntrePalmas",
+      "thumbnail": "https://i.ytimg.com/vi/MHKU01bueoc/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/MHKU01bueoc",
+      "published": "2026-04-24T14:39:12+00:00",
+      "views": 112
+    },
+    {
+      "id": "Rsgz2SlAM2o",
+      "kind": "short",
+      "number": null,
+      "title": "Hay una forma de SEMBRAR la palma que está CAMBIANDO EL JUEGO",
+      "description": "El primer EP de #ViviendoEntrePalmas, analizamos cómo Costa Rica impulsa un enfoque regenerativo y preventivo, mientras otros países siguen estrategias más agresivas como la erradicación o el uso de híbridos. 🌍\n\nUn contraste que marca el rumbo hacia una palma más sostenible.\n\nMira el episodio completo y profundiza en este debate junto a nosotros.🎧\n\n#PalmaAlDía #ActualidadPalmera #PalmaSustentable\nEdited · 17w",
+      "thumbnail": "https://i.ytimg.com/vi/Rsgz2SlAM2o/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/Rsgz2SlAM2o",
+      "published": "2026-04-21T12:53:53+00:00",
+      "views": 108
+    },
+    {
+      "id": "V_2imWtLeW0",
+      "kind": "live",
+      "number": null,
+      "title": "Principios fundamentales en la nutrición vegetal de la palma aceitera | Ing. José Cardozo",
+      "description": "Acompáñanos en esta transmisión en directo del conversatorio-conferencia “Principios fundamentales en la nutrición vegetal de la palma aceitera”, a cargo del Ing. José Álvaro Cardozo.\n\nUn espacio para aprender, actualizar conocimientos y reflexionar sobre la importancia de la nutrición vegetal en el desarrollo y productividad de la palma aceitera.\n\nFecha: 17/04/2026\nHora: 2:00 pm\nLugar: Sede Palmesur\nEvento gratuito\n\nTransmisión en vivo por nuestro canal de YouTube Viviendo entre Palmas.\n\nOrganizan y acompañan esta actividad: Palma Al Día, FEVEPALMA, PalmeSur e INSUAECOL.\n\nSíguenos también en Instagram: @palmaaldia\n\n#PalmaAceitera #NutriciónVegetal #PalmaAlDía #ViviendoEntrePalmas #Palmicultura #Agricultura #EnVivo",
+      "thumbnail": "https://i.ytimg.com/vi/V_2imWtLeW0/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=V_2imWtLeW0",
+      "published": "2026-04-18T08:13:24+00:00",
+      "views": 297
+    },
+    {
+      "id": "avxJYA8T71g",
+      "kind": "short",
+      "number": null,
+      "title": "Están cosechando MAL y PERDIENDO rendimiento sin saberlo",
+      "description": "En el Episodio 3 de #ViviendoEnntrePalmas, el Ing. Ender Urdaneta lo deja claro:\nla maduración del fruto no es intuición, es criterio técnico.\n\n📊 Ciclos de cosecha bien definidos\n🌧 Ajuste según condiciones climáticas\n🍃 Corte en el punto óptimo\n\nUn error en campo se traduce en menor extracción y pérdida de eficiencia.\n\nAquí no se trata solo de cosechar, se trata de cosechar en el momento correcto.\n\n##PalmaAlDía #AgriculturaVenezolana",
+      "thumbnail": "https://i.ytimg.com/vi/avxJYA8T71g/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/avxJYA8T71g",
+      "published": "2026-04-16T14:51:57+00:00",
+      "views": 340
+    },
+    {
+      "id": "L5_gbszoDvs",
+      "kind": "episode",
+      "number": 5,
+      "title": "¿Quién define el precio de la fruta?",
+      "description": "¿Quién define realmente el precio de la fruta?\n¿El peso del racimo o el aceite que ese fruto puede aportar?\n\nEn este episodio de Viviendo Entre Palmas, Jhonny Romero y Karym Urdaneta conversan sobre la calidad de la fruta y su impacto directo en la extracción de aceite dentro de la planta.\n\nA lo largo del capítulo, explican por qué el fruto maduro tiene mayor potencial de aceite, cómo la cosecha influye en el rendimiento final y por qué prácticas como recoger la fruta suelta siguen siendo clave para no perder ganancia en campo.\n\nTambién se aborda una idea central: la planta y el productor no deberían verse como lados opuestos, sino como parte de un mismo proceso. Porque cuando mejora la calidad de la fruta, mejora la extracción, mejora la rentabilidad y gana toda la cadena.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector —productores, técnicos y especialistas— comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\n\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas y aprendizajes que dan forma a la palmicultura en Venezuela. Contenido nacido de la experiencia real, tecnología aplicada y visión de futuro contadas desde quienes viven la palma de cerca.\n\nSi crees que una mejor palmicultura se construye cuando el campo y la planta trabajan en la misma dirección, este episodio abre una conversación necesaria sobre calidad, rendimiento y rentabilidad compartida.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\n\nWeb: www.palmaaldia.com",
+      "thumbnail": "https://i.ytimg.com/vi/L5_gbszoDvs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=L5_gbszoDvs",
+      "published": "2026-03-26T20:32:01+00:00",
+      "views": 85
+    },
+    {
+      "id": "AfNUcqUtYxQ",
+      "kind": "episode",
+      "number": 4,
+      "title": "Híbridos OxG en perspectiva",
+      "description": "¿Qué son realmente los híbridos OxG?\n¿Y por qué su uso ha tomado tanta fuerza en algunos países, mientras sigue generando debate en campo?\n\nEn este episodio de Viviendo Entre Palmas, abordamos los híbridos OxG desde una mirada técnica y contextual: qué son, cómo surge esta genética y por qué ha ganado protagonismo en países como Colombia dentro de ciertas estrategias productivas del sector.\n\nA lo largo de la conversación, también se analizan las diferencias que presenta frente a la palma africana tradicional y se plantea una idea clave: no se trata de una opción negativa, pero sí de un material más exigente, que demanda mayor manejo, más cuidado y una comprensión más profunda antes de ser implementado en campo.\n\nPorque no toda genética responde igual.\nY en palmicultura, entender el material que se siembra es tan importante como saber manejar el cultivo que se quiere sostener en el tiempo.\n\nEste episodio abre una conversación necesaria sobre criterios técnicos, contexto productivo y toma de decisiones responsables, especialmente cuando se trata de incorporar materiales que implican nuevos retos agronómicos y operativos.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector —productores, técnicos y especialistas— comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\n\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas, ideas y aprendizajes que dan forma a la palmicultura en Venezuela. Contenido nacido de la experiencia real, tecnología aplicada y visión de futuro contadas desde quienes viven la palma de cerca.\n\nSi crees que una mejor palmicultura también depende de entender a fondo la genética que llevamos al campo, este episodio te ofrece una mirada técnica, equilibrada y necesaria sobre los híbridos OxG.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\n\nWeb: www.palmaaldia.com\n\n📍 Venezuela — Sur del Lago | Palma Al Día",
+      "thumbnail": "https://i.ytimg.com/vi/AfNUcqUtYxQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AfNUcqUtYxQ",
+      "published": "2026-03-19T20:34:41+00:00",
+      "views": 60
+    },
+    {
+      "id": "1x7_9VesugY",
+      "kind": "episode",
+      "number": 3,
+      "title": "Así se define la calidad de la fruta en el campo",
+      "description": "¿Dónde comienza realmente la calidad de la fruta?\n¿En la cosecha… o mucho antes, en el diseño mismo de la plantación?\n\nEn este episodio de Viviendo Entre Palmas, Ender Urdaneta, Osmer Montiel y Karym Urdaneta conversan sobre los factores que realmente determinan la calidad del fruto en el campo.\n\nDesde el manejo agronómico hasta el diseño de la plantación, pasando por los drenajes, el tipo de suelo, la integración de tecnología y los costos asociados a la plantación y la cosecha. Una mirada completa al sistema productivo que hay detrás de cada racimo.\n\nPorque la calidad no es un evento aislado:\nes el resultado de decisiones técnicas que se toman desde el establecimiento del cultivo y se sostienen durante toda la vida productiva de la plantación.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector —productores, técnicos y especialistas— comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\n\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas y aprendizajes que dan forma a la palmicultura en Venezuela.\n\nSi crees que una mejor palmicultura comienza con entender mejor el campo, este episodio abre la conversación sobre cómo se construye —de verdad— la calidad de la fruta.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\n\nWeb: www.palmaaldia.com\n\n📍 Venezuela — Sur del Lago | Palma Al Día",
+      "thumbnail": "https://i.ytimg.com/vi/1x7_9VesugY/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=1x7_9VesugY",
+      "published": "2026-03-14T14:00:00+00:00",
+      "views": 48
+    },
+    {
+      "id": "OHRpvz8vN0Y",
+      "kind": "episode",
+      "number": 2,
+      "title": "El campo no se improvisa: se aprende, se hereda y se cuida",
+      "description": "¿Cómo se transmite la cultura del campo de una generación a otra?\n¿Está preparada la palmicultura venezolana para formar a quienes vienen detrás?\n\nEn este episodio, Ender Urdaneta, Belkys Moreno y Karym Urdaneta conversan sobre el mensaje cultural que sostiene a la palmicultura, la importancia de la capacitación continua y los retos —y oportunidades— del relevo generacional en el sector. Una charla que conecta experiencia, formación y visión, desde la realidad del campo venezolano.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector: productores, técnicos y especialistas, comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas, ideas y aprendizajes que dan forma a la palmicultura en Venezuela. Contenido nacido de la experiencia real, tecnología aplicada y visión de futuro contadas desde quienes viven la palma de cerca.\n\nSi crees en una palmicultura que se fortalece cuando el conocimiento se comparte y las generaciones se conectan, este episodio abre una conversación necesaria sobre cómo formar, comunicar y construir futuro desde el campo.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\n\nWeb: www.palmaaldia.com\n\n📍 Venezuela — Sur del Lago | Palma Al Día",
+      "thumbnail": "https://i.ytimg.com/vi/OHRpvz8vN0Y/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=OHRpvz8vN0Y",
+      "published": "2026-01-08T22:59:14+00:00",
+      "views": 46
+    },
+    {
+      "id": "WTfj48nmXOs",
+      "kind": "episode",
+      "number": 1,
+      "title": "El inicio de la palmicultura en el Sur del Lago",
+      "description": "¿Cómo se construye un cultivo cuando no existe un camino claro?\n¿Quiénes decidieron apostar por la palma aceitera cuando casi nadie creía en ella?\n\nEn este episodio, Álvaro Carmona y Karym Urdaneta recorren la historia temprana de la palmicultura en el Sur del Lago. Entre anécdotas, decisiones difíciles y aprendizajes nacidos del terreno, cuentan cómo comenzó un movimiento agrícola que hoy sostiene a cientos de productores venezolanos.\n\nUna conversación íntima que revela la visión, los aciertos y la determinación que formaron los primeros surcos de la palma aceitera en la región.\n\nViviendo Entre Palmas es el podcast de Palma Al Día, un espacio donde las voces del sector: productores, técnicos y especialistas, comparten lo que han aprendido caminando, sembrando y viviendo en el día a día del campo venezolano.\n\nAquí hablamos con claridad y criterio sobre las decisiones, prácticas, ideas y aprendizajes que dan forma a la palmicultura en Venezuela. Contenido nacido de la experiencia real, tecnología aplicada y visión de futuro contadas desde quienes viven la palma de cerca.\n\nSi crees en una palmicultura que crece cuando crecemos juntos, acompáñanos. Aquí compartimos historias y aprendizajes que unen al productor venezolano con el futuro que está construyendo.\n\n📩 Contacto:\nInstagram: @palmaaldia\nCorreo: contacto@palmaaldia.com\nWeb: www.palmaaldia.com",
+      "thumbnail": "https://i.ytimg.com/vi/WTfj48nmXOs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=WTfj48nmXOs",
+      "published": "2025-12-03T23:06:42+00:00",
+      "views": 195
     }
   ]
 }

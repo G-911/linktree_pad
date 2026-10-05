@@ -1,27 +1,19 @@
 /* ============================================================
-   Fuentes
+   Fuentes (Ubuntu variable, subconjunto latino; licencia en assets/fonts)
    ============================================================ */
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-400.ttf") format("truetype");
-  font-weight: 400;
+  src: url("../fonts/ubuntu.woff2") format("woff2");
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-500.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-700.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/ubuntu-italic.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -29,6 +21,9 @@
    Variables de marca
    ============================================================ */
 :root {
+  /* La paleta es solo clara; el navegador no debe oscurecerla por su cuenta */
+  color-scheme: only light;
+
   --ink: #24311b;
   --paper: #ffffff;
   --green: #5b8726;
@@ -161,31 +156,6 @@ main {
   padding: clamp(30px, 5vw, 64px);
 }
 
-.hero-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  align-self: flex-start;
-  margin: 0 0 22px;
-  padding: 7px 14px 7px 10px;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .08);
-  color: var(--paper);
-  font-size: .74rem;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-.hero-kicker::before {
-  content: "";
-  width: 22px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--orange);
-}
-
 h1 {
   display: flex;
   flex-direction: column;
@@ -276,9 +246,13 @@ h1 {
   height: 34px;
   border: 1px solid var(--line);
   border-radius: 50%;
+  flex: none;
   color: var(--green);
-  font-size: .73rem;
-  font-weight: 700;
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .arrow {
@@ -336,23 +310,38 @@ h2 {
 
 .episode-art {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 330px;
   overflow: hidden;
   background: var(--green);
 }
 
+/* La miniatura se ve entera (16:9); el espacio sobrante de la columna se
+   rellena con la misma imagen desenfocada. main.js define --art. */
+.episode-art::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: var(--art, none) center / cover no-repeat;
+  filter: blur(22px) brightness(.55);
+  transform: scale(1.1);
+}
+
 .episode-art::after {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: 0;
   background: linear-gradient(180deg, transparent 60%, rgba(17, 17, 20, .5));
 }
 
 .episode-art img {
+  position: relative;
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 330px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -557,37 +546,14 @@ h3 {
   font-size: .82rem;
 }
 
-/* Descripción plegable: cerrada por defecto, con scroll propio al abrirla */
-.mini-desc {
-  margin-top: 12px;
-  border-top: 1px solid var(--line);
-}
-
-.mini-desc summary {
-  padding-top: 10px;
-  color: var(--green);
-  font-size: .85rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.mini-desc summary:hover,
-.mini-desc summary:focus-visible {
-  color: var(--orange);
-  outline: none;
-}
-
-.mini-desc p {
-  max-height: 11em;
-  margin: 8px 0 0;
+/* Descripción de las tarjetas: el mismo bloque con scroll propio del último episodio,
+   más bajo y con letra algo menor para que la tarjeta no crezca */
+.summary.mini-summary {
+  height: 7.5em;
+  max-width: none;
+  margin: 12px 0 0;
   padding-right: 10px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  color: var(--muted);
-  font-size: .85rem;
-  white-space: pre-line;
-  scrollbar-width: thin;
-  scrollbar-color: var(--line) transparent;
+  font-size: .88rem;
 }
 
 .mini-actions {
@@ -662,8 +628,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /* En una columna la caja ya es 16:9: sin relleno desenfocado */
   .episode-art {
-    min-height: 250px;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .episode-grid {
@@ -711,7 +679,45 @@ footer {
   }
 
   .episode-copy {
-    padding: 28px 22px;
+    padding: 24px 20px 22px;
+  }
+
+  /* Último episodio en móvil: metadatos en una línea, título más contenido,
+     descripción en su recuadro con un degradado que avisa de que hay más texto,
+     y botones a todo el ancho para el pulgar */
+  .meta {
+    margin-bottom: 12px;
+    font-size: .7rem;
+    letter-spacing: .08em;
+  }
+
+  .episode-copy h3 {
+    font-size: 1.6rem;
+  }
+
+  .summary {
+    height: 12em;
+    margin-top: 14px;
+    padding-right: 8px;
+    font-size: .95rem;
+    overscroll-behavior: auto;
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+    mask-image: linear-gradient(180deg, #000 80%, transparent);
+  }
+
+  .summary.at-end {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .listen {
+    flex-direction: column;
+    margin-top: 22px;
+  }
+
+  .listen .btn {
+    width: 100%;
+    min-height: 48px;
   }
 
   footer {

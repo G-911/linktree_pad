@@ -11,3 +11,9 @@ Thumbs.db
 # Herramientas
 .claude-flow/
 .playwright-mcp/
+
+# Archivos de trabajo locales
+.claude/
+.impeccable/
+assets/img/LOGO - PAD.ai
+decisiones/

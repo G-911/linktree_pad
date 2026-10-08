@@ -11,7 +11,7 @@
     "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/maxresdefault.jpg",
     "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
     "published": "2026-09-10T23:00:06+00:00",
-    "views": 294
+    "views": 295
   },
   "top": [
     {
@@ -53,6 +53,17 @@
   ],
   "catalog": [
     {
+      "id": "HSXyoSdX0pw",
+      "kind": "video",
+      "number": null,
+      "title": "Alberto Chavarría: el hombre que transformó el drenaje del Sur del Lago",
+      "description": "Palma Al Día presenta una producción especial dedicada a la memoria y al legado de Alberto Chavarría, ingeniero agrícola y especialista en drenaje, cuya experiencia estuvo vinculada al desarrollo agrícola del Sur del Lago.\n\nEn una región donde el agua y las condiciones del terreno representaban algunos de los principales desafíos para la producción, comprender el comportamiento del suelo y diseñar sistemas adecuados de drenaje fue fundamental para abrir camino al desarrollo agrícola.\nA través del testimonio del ingeniero Álvaro Carmona y de quienes compartieron experiencias y conocimientos con Alberto Chavarría, recorremos parte de esta historia y conocemos al hombre que es recordado como Padre del Drenaje Científico en el Sur del Lago.\n\nCuando Chavarría y Carmona llegaron desde Costa Rica, acompañados por Rigumberto Urdaneta, encontraron un territorio con enormes posibilidades, pero también con condiciones que exigían conocimiento técnico, planificación y trabajo.\n\nPara Chavarría, el drenaje no consistía simplemente en abrir canales. Era necesario estudiar el terreno, comprender cómo se comportaba el agua y entender la relación entre suelo, drenaje y producción.\n\nPero su legado no estuvo únicamente en el trabajo técnico. También estuvo en la transmisión del conocimiento.\n\nA lo largo de esta producción conocemos la importancia de formar a nuevas generaciones y de cómo ese conocimiento fue pasando de unos profesionales a otros, incluyendo a José Pineda, quien recuerda su experiencia como discípulo de Chavarría.\n\nHoy, cuando observamos las plantaciones, los canales y el paisaje productivo del Sur del Lago, es fácil olvidar que detrás de esa realidad existen décadas de aprendizaje, trabajo y personas que tuvieron que resolver problemas que entonces no tenían respuestas sencillas.\n\nEsta producción especial de Palma Al Día busca rescatar parte de esa memoria.\nPorque conocer la historia de quienes construyeron conocimiento en el campo también permite comprender mejor los desafíos que enfrenta hoy la agricultura y la palmicultura.\n\nPalma Al Día es un medio especializado dedicado a informar, analizar y generar conocimiento sobre la palma aceitera y el sector palmicultor de Venezuela y Latinoamérica.",
+      "thumbnail": "https://i.ytimg.com/vi/HSXyoSdX0pw/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HSXyoSdX0pw",
+      "published": "2026-10-08T15:16:28+00:00",
+      "views": 2
+    },
+    {
       "id": "kXXuxv9rHPE",
       "kind": "episode",
       "number": 8,
@@ -61,7 +72,7 @@
       "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/maxresdefault.jpg",
       "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       "published": "2026-09-10T23:00:06+00:00",
-      "views": 294
+      "views": 295
     },
     {
       "id": "N0Tx9yvKHDU",

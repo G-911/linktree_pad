@@ -24,7 +24,7 @@
       "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       "published": "2026-09-10T23:00:06+00:00",
-      "views": 359
+      "views": 360
     },
     {
       "id": "avxJYA8T71g",
@@ -53,6 +53,17 @@
   ],
   "catalog": [
     {
+      "id": "ZuPTKzZHV5M",
+      "kind": "short",
+      "number": null,
+      "title": "La fisiología de la palma que puede cambiar tu producción",
+      "description": "🚨 ¿Qué determina que una palma aceitera produzca una inflorescencia masculina o femenina? 🌴\n\nMucho antes de que podamos observar la flor, dentro de la palma ya ocurre un complejo proceso de diferenciación sexual relacionado con su fisiología, genética y las condiciones en las que se desarrolla.\n\nEn el episodio #011 de Viviendo Entre Palmas, hablamos del primordio floral, las flores masculinas y femeninas y de por qué conocer el comportamiento fisiológico de cada material es fundamental para entender la producción.\n\nLo que vemos hoy en una plantación comenzó a definirse mucho antes.\n\n#PalmaAceitera #Palmicultura #PalmaAlDía #FisiologíaVegetal #Inflorescencia #ProducciónDePalma",
+      "thumbnail": "https://i.ytimg.com/vi/ZuPTKzZHV5M/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/ZuPTKzZHV5M",
+      "published": "2026-11-10T15:22:04+00:00",
+      "views": 5
+    },
+    {
       "id": "VZGxsCnMsYI",
       "kind": "short",
       "number": null,
@@ -61,7 +72,7 @@
       "thumbnail": "https://i.ytimg.com/vi/VZGxsCnMsYI/hqdefault.jpg",
       "url": "https://www.youtube.com/shorts/VZGxsCnMsYI",
       "published": "2026-11-10T01:26:04+00:00",
-      "views": 57
+      "views": 72
     },
     {
       "id": "ZU7Trqs4Dqc",
@@ -105,7 +116,7 @@
       "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       "published": "2026-09-10T23:00:06+00:00",
-      "views": 359
+      "views": 360
     },
     {
       "id": "N0Tx9yvKHDU",

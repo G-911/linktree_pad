@@ -11,7 +11,7 @@
     "thumbnail": "https://i.ytimg.com/vi/ZU7Trqs4Dqc/maxresdefault.jpg",
     "url": "https://www.youtube.com/watch?v=ZU7Trqs4Dqc",
     "published": "2026-10-26T11:30:18+00:00",
-    "views": 156
+    "views": 160
   },
   "top": [
     {
@@ -24,7 +24,7 @@
       "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       "published": "2026-09-10T23:00:06+00:00",
-      "views": 358
+      "views": 359
     },
     {
       "id": "avxJYA8T71g",
@@ -53,6 +53,17 @@
   ],
   "catalog": [
     {
+      "id": "VZGxsCnMsYI",
+      "kind": "short",
+      "number": null,
+      "title": "¿GLIFOSATO EN PALMA ACEITERA? La advertencia que llega desde Colombia #podcast",
+      "description": "🚨 ¿El uso de glifosato puede estar relacionado con la muerte de raíces en palma aceitera? Una advertencia que abre un fuerte debate sobre manejo agronómico, PC y pérdida de plantaciones. 🌴🔥\n\n#PalmaAceitera #Palmicultura #PalmaAlDía #Glifosato #SectorPalmero #Agricultura",
+      "thumbnail": "https://i.ytimg.com/vi/VZGxsCnMsYI/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/VZGxsCnMsYI",
+      "published": "2026-11-10T01:26:04+00:00",
+      "views": 57
+    },
+    {
       "id": "ZU7Trqs4Dqc",
       "kind": "episode",
       "number": 10,
@@ -61,7 +72,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ZU7Trqs4Dqc/maxresdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ZU7Trqs4Dqc",
       "published": "2026-10-26T11:30:18+00:00",
-      "views": 156
+      "views": 160
     },
     {
       "id": "GaB0arP6QW0",
@@ -94,7 +105,7 @@
       "thumbnail": "https://i.ytimg.com/vi/kXXuxv9rHPE/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=kXXuxv9rHPE",
       "published": "2026-09-10T23:00:06+00:00",
-      "views": 358
+      "views": 359
     },
     {
       "id": "N0Tx9yvKHDU",
@@ -105,7 +116,7 @@
       "thumbnail": "https://i.ytimg.com/vi/N0Tx9yvKHDU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=N0Tx9yvKHDU",
       "published": "2026-07-09T18:58:37+00:00",
-      "views": 224
+      "views": 225
     },
     {
       "id": "Oi6qQQK-Uqw",
@@ -149,7 +160,7 @@
       "thumbnail": "https://i.ytimg.com/vi/-DgV6JoWCI0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=-DgV6JoWCI0",
       "published": "2026-05-05T14:57:10+00:00",
-      "views": 149
+      "views": 150
     },
     {
       "id": "MHKU01bueoc",

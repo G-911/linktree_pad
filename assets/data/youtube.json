@@ -11,7 +11,7 @@
     "thumbnail": "https://i.ytimg.com/vi/ZU7Trqs4Dqc/maxresdefault.jpg",
     "url": "https://www.youtube.com/watch?v=ZU7Trqs4Dqc",
     "published": "2026-10-26T11:30:18+00:00",
-    "views": 164
+    "views": 169
   },
   "top": [
     {
@@ -31,7 +31,6 @@
       "kind": "short",
       "number": null,
       "title": "Están cosechando MAL y PERDIENDO rendimiento sin saberlo",
-      "rawTitle": "🚨 Están cosechando MAL y PERDIENDO rendimiento sin saberlo",
       "description": "En el Episodio 3 de #ViviendoEnntrePalmas, el Ing. Ender Urdaneta lo deja claro:\nla maduración del fruto no es intuición, es criterio técnico.\n\n📊 Ciclos de cosecha bien definidos\n🌧 Ajuste según condiciones climáticas\n🍃 Corte en el punto óptimo\n\nUn error en campo se traduce en menor extracción y pérdida de eficiencia.\n\nAquí no se trata solo de cosechar, se trata de cosechar en el momento correcto.\n\n##PalmaAlDía #AgriculturaVenezolana",
       "thumbnail": "https://i.ytimg.com/vi/avxJYA8T71g/hqdefault.jpg",
       "url": "https://www.youtube.com/shorts/avxJYA8T71g",
@@ -53,6 +52,17 @@
   ],
   "catalog": [
     {
+      "id": "iDLTLjiErhc",
+      "kind": "short",
+      "number": null,
+      "title": "La GRAN MENTIRA de las “recetas mágicas” en agricultura regenerativa",
+      "description": "🚨 La agricultura regenerativa no funciona con recetas copiadas.\n\nCada finca tiene condiciones distintas de suelo, manejo y producción. Aplicar prácticas porque “están de moda” o porque funcionaron en otro lugar puede generar errores costosos.\n\nEn este Short de **Palma Al Día** hablamos de uno de los principales riesgos al implementar agricultura regenerativa: actuar sin diagnóstico, sin datos y sin entender realmente lo que necesita tu finca.\n\n🌱 Regenerar no es copiar. Es conocer, medir y decidir mejor.\n\n#AgriculturaRegenerativa #PalmaAlDía #PalmaAceitera #Palmicultura #ManejoDeSuelos #Agronomía",
+      "thumbnail": "https://i.ytimg.com/vi/iDLTLjiErhc/hqdefault.jpg",
+      "url": "https://www.youtube.com/shorts/iDLTLjiErhc",
+      "published": "2026-11-12T03:46:49+00:00",
+      "views": 3
+    },
+    {
       "id": "ZuPTKzZHV5M",
       "kind": "short",
       "number": null,
@@ -61,7 +71,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ZuPTKzZHV5M/hqdefault.jpg",
       "url": "https://www.youtube.com/shorts/ZuPTKzZHV5M",
       "published": "2026-11-10T15:22:04+00:00",
-      "views": 29
+      "views": 40
     },
     {
       "id": "VZGxsCnMsYI",
@@ -72,7 +82,7 @@
       "thumbnail": "https://i.ytimg.com/vi/VZGxsCnMsYI/hqdefault.jpg",
       "url": "https://www.youtube.com/shorts/VZGxsCnMsYI",
       "published": "2026-11-10T01:26:04+00:00",
-      "views": 113
+      "views": 136
     },
     {
       "id": "ZU7Trqs4Dqc",
@@ -83,7 +93,7 @@
       "thumbnail": "https://i.ytimg.com/vi/ZU7Trqs4Dqc/maxresdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ZU7Trqs4Dqc",
       "published": "2026-10-26T11:30:18+00:00",
-      "views": 164
+      "views": 169
     },
     {
       "id": "GaB0arP6QW0",
@@ -105,7 +115,7 @@
       "thumbnail": "https://i.ytimg.com/vi/HSXyoSdX0pw/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=HSXyoSdX0pw",
       "published": "2026-10-08T15:16:28+00:00",
-      "views": 29
+      "views": 30
     },
     {
       "id": "kXXuxv9rHPE",
